@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="html, training, lessons, templates">
+    <meta lang="en-US">
+  </head>
+  <body>
+    <p id="paragraph1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget arcu dictum varius duis at consectetur.</p>
+    <p>Second paragraph</p>
+    <script>
+      //styling existing Elements
+      document.getElementById("paragraph1").style.color = "red";
+      document.getElementById("paragraph1").innerHTML = "JavaScript just hacked your site!... Yikes :)";
+      document.getElementById("paragraph1").style.backgroundColor = "black";    
+      /*document.getElementsByTagName("p").style.font.bold = true;*/  
+      //document.getElementsByTagName("p").style.fontSize = "xxlarge";    
+      
+      // Creating New Elements..
+      var javabutton = document.createElement("button");
+      javabutton.innerHTML = "I was created by Javascript.";
+      javabutton.style.background = "red";
+      javabutton.style.color = "white";
+      document.body.appendChild(javabutton);
+
+      //document.getElementById("myDiv").addEventListener("click", myfunction)
+    
+    </script>
+  </body>
+</html>

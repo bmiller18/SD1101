@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="html, training, lessons, templates">
+    <meta lang="en-US">
+  </head>
+
+  <body>
+    
+    <div id="divColorSimple" onmouseover="changeColorOnMouseOver1()" onmouseout="changeColorOnMouseOut1()">Hello world from divColorSimple</div>
+
+    <div id="divColorAdvanced" onmouseover="changeColorOnMouseOver2(this, 'darkred')" onmouseout="changeColorOnMouseOut2(this, 'darkgrey')">Hello world from divColorAdvanced</div>
+
+    <div id="divPasswordValidation">
+        <h2>Login</h2>
+        <label display-for="pass1">Password1</label>
+        <input id="pass1" type="password" />
+
+        <label display-for="pass2" text="">Password2</label>
+        <input id="pass2" type="password"  /><br/>
+        <button onclick="ValidatePasswords('pass1', 'pass2');">Submit</button>
+    </div>
+
+    <h2>addEventListerner for Border Toggle</h2>
+    <div id="divAddListenerToggleBorder" style="border:5px solid red" onclick=''>
+        AddListener Example ... Click me!
+    </div>
+
+    <h2>Store In Browser</h2>
+    <div id="divStoreInBrowser">
+        <label display-for="inputStoreInBrowser" text="">Enter Value</label>
+        <input id="inputStoreInBrowser" type="text" /><br/>
+        <button onclick="storeInBrowser();">Store Value</button>
+    </div>
+
+    <script src = "9-5lab.js"></script>
+  </body>
+</html>
