@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="html, training, lessons, templates">
+    <meta lang="en-US">
+    
+    <title>Final Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/popper.js"> </script>
+  
+    <style>
+
+      h1{
+        color: white;
+      }
+
+      h6{
+        color:white;
+        text-align:center;
+      }
+
+      article{
+        background-color: rgb(8, 7, 26);
+        margin: 10px;
+        padding: 2%;
+        height: 500px;
+        color:white;
+        font-size: 2.2em;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <img class="navbar-img" src='tomatoicon.png'>
+      <h1 class="mr-auto">At the Movies</h1>
+      <ul class="nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="final-project.html">Movies</a>
+        </li>
+    </nav>
+
+    <div class="container-fluid">
+      <div class = "row">
+        <div class="mr-auto container-fluid col-6">
+          <div class= row>
+            <div class="card col-4">
+              <img src="lion_king.jpg" class="card-img-top" onclick="showReview(0)" >
+              <div class="card-body">
+                <h5 class="card-title">Lion King</h5>
+              </div>
+            </div>
+            <div class="card col-4">
+              <img src="aladdin.jpg" class="card-img-top" onclick="showReview(1)" >
+              <div class="card-body">
+                <h5 class="card-title">Aladdin</h5>
+              </div>
+            </div>
+            <div class="card col-4">
+              <img src="last_jedi.jpg" class="card-img-top" onclick="showReview(2)" >
+              <div class="card-body">
+                <h5 class="card-title">Star Wars: The Last Jedi</h5>
+              </div>
+            </div>
+            <div class="card col-4">
+              <img src="Lego-Movie-2.jpg" class="card-img-top" onclick="showReview(3)" >
+              <div class="card-body">
+                <h5 class="card-title">The Lego Movie 2</h5>
+              </div>
+            </div>
+            <div class="card col-4">
+              <img src="first-man.jpg" class="card-img-top" onclick="showReview(4)" >
+              <div class="card-body">
+                <h5 class="card-title">First Man</h5>
+              </div>
+            </div>
+            <div class="card col-4">
+              <img src="batman_v_superman.jpg" class="card-img-top" onclick="showReview(5)">
+              <div class="card-body">
+                <h5 class="card-title">Batman Vs Superman</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="ml-auto col-5">
+          <article class="review" > 
+            Honest Movie Reviews!
+          </article>
+        </section>
+      </div>
+    <div>
+  </body>
+
+  <footer class="bg-dark">
+    <h6>SD101 Movies Project</h6>
+  </footer>
+
+  <script>
+  function showReview(movieID){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          let reviews = JSON.parse(this.responseText);
+          let movieTitle = reviews.movies[movieID].title;
+          let movieReview = reviews.movies[movieID].review;
+          $(".review").text(movieReview);
+
+        }
+    };
+    xhttp.open("GET","https://raw.githubusercontent.com/Steve-Rossiter/SD101/master/movieprojectfiles/reviews.json",true);
+    xhttp.send();
+    
+  }
+  </script>
+</html>  

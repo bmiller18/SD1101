@@ -1,0 +1,37 @@
+{
+  "movies":[
+    {
+      "id":1,
+      "title":"The Lion King",
+      "review":"Just about every choice Favreau made as director was the wrong choice, and his insistence on '100% realism' in a film in which the animals talk, sing, and do choreography makes my head hurt."
+    },
+    {
+      "id":2,
+      "title":"Aladdin",
+      "review":"It's bizarre in a way that's sometimes funny-bad and sometimes just bad-bad."
+    },
+    {
+      "id":3,
+      "title":"Star Wars: The Last Jedi",
+      "review":"The film that killed Star Wars."
+    },
+    {
+      "id":4,
+      "title":"The Lego Movie 2",
+      "review":"A sequel that pulls time-and-a-half to carry all the corporate water the first one left at the bottom of a hill."
+    },
+    {
+      "id":5,
+      "title":"First Man",
+      "review":"First Man never quite connects at a gut level. For a story that shoots for the moon, it has trouble leaving the ground."
+    },
+    {
+      "id":6,
+      "title":"Batman vs Superman",
+      "review":"Lex Luthor's plan has so many plot holes as well as the script as a whole."
+    }
+
+
+
+  ]
+}
